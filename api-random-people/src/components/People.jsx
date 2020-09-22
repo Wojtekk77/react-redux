@@ -3,7 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { connect } from "react-redux";
 import { addPerson } from "../actions/buttonAddPersonActions";
 import { generatePeople } from "../actions/personActions";
-import Perston from "./Person.jsx";
+import Person from "./Person.jsx";
+
 const People = () => {
   const dispatch = useDispatch();
   const store = useSelector((state) => state);
@@ -20,6 +21,7 @@ const People = () => {
   return (
     <div>
       <h1>Person</h1>
+      <Person />
     </div>
   );
 };
