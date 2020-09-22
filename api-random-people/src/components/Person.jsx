@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { connect } from "react-redux";
 import { addPerson } from "../actions/buttonAddPersonActions";
 import { generatePeople } from "../actions/personActions";
-class Person extends React.Component {
-  state = { users: [] };
-  componentDidMount = () => {
+
+const Person = () => {
+  const dispatch = useDispatch();
+  const store = useSelector((state) => state);
+  // const [count, setCount] = useState(0);
+  useEffect(() => {
     fetch("https://randomuser.me/api/?results=5")
       .then((res) => {
         return res.json();
@@ -14,20 +17,16 @@ class Person extends React.Component {
         return res.results;
       })
       .then((person) => {
-        console.log("co dajemy dla naszego state", person);
-        useDispatch(generatePeople(person));
+        dispatch(generatePeople(person));
       });
-    console.log("zaraz po componentDidMount", this.state.users);
-  };
+  }, []);
 
-  render() {
-    return (
-      <div>
-        <h1>Person</h1>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <h1>Person</h1>
+    </div>
+  );
+};
 export default Person;
 // const mapStateToProps = (state) => {
 //   // current state of our store
