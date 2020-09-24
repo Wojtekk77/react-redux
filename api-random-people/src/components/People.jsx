@@ -16,12 +16,13 @@ const People = () => {
       .then((person) => dispatch(generatePeople(person)));
   }, []);
 
-  console.log(store);
-
+  const people = store.users.map((user) => {
+    return <Person user={user} />;
+  });
   return (
-    <div>
-      <h1>Person</h1>
-      <Person />
+    <div className="container">
+      <h1>People</h1>
+      <div className="row">{people}</div>
     </div>
   );
 };

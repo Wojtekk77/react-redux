@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { peopleReducer } from "./reducers/peopleReducers";
-
+import "bootstrap/dist/css/bootstrap.css";
 const store = createStore(peopleReducer);
 
 ReactDOM.render(
