@@ -14,8 +14,19 @@ const Person = (props) => {
 
         <img src={props.user.picture.medium} />
       </div>
-      <div className="box_main_person">Main {props.user.email}</div>
-      <div className="box_footer_person">Footer {props.user.gender}</div>
+      <div className="box_main_person">
+        <ul>
+          <li>Phone: {props.user.phone}</li>
+          <li className="email">
+            Email: <br /> <span>{props.user.email}</span>
+          </li>
+          <li>Location: {props.user.location.city}</li>
+          <li>Country: {props.user.location.country}</li>
+        </ul>
+      </div>
+      <div className="box_footer_person">
+        <button className="btn btn-primary">Learn more</button>
+      </div>
     </div>
   );
 };
