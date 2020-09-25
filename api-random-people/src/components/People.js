@@ -3,26 +3,29 @@ import { useSelector, useDispatch } from "react-redux";
 import { connect } from "react-redux";
 import { addPerson } from "../actions/buttonAddPersonActions";
 import { generatePeople } from "../actions/personActions";
-import Person from "./Person.jsx";
+import Person from "./Person.js";
 
 const People = () => {
   const dispatch = useDispatch();
   const store = useSelector((state) => state);
   // const [count, setCount] = useState(0);
   useEffect(() => {
-    fetch("https://randomuser.me/api/?results=5")
+    fetch(
+      "https://cors-anywhere.herokuapp.com/" +
+        "https://randomuser.me/api/?results=5"
+    )
       .then((res) => res.json())
       .then((res) => res.results)
       .then((person) => dispatch(generatePeople(person)));
   }, []);
 
   const people = store.users.map((user) => {
-    return <Person user={user} />;
+    return <Person key={user.email} user={user} />;
   });
   return (
     <div className="container">
       <h1>People</h1>
-      <div className="row">{people}</div>
+      <div className="row">{store.isLoaded ? people : <h2>Loading...</h2>}</div>
     </div>
   );
 };

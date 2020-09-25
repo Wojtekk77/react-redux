@@ -1,6 +1,6 @@
 import React from "react";
-import ButtonAddPerson from "./components/ButtonAddPerson.jsx";
-import People from "./components/People.jsx";
+import ButtonAddPerson from "./components/ButtonAddPerson.js";
+import People from "./components/People.js";
 function App() {
   return (
     <div className="App">

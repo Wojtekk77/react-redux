@@ -1,3 +1,23 @@
 .box_person {
   border: 2px solid black;
 }
+
+.box_header_person {
+  text-align: center;
+}
+
+.box_header_person img {
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.box_header_person .name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.box_main_person {
+}
+
+.box_footer_person {
+}
