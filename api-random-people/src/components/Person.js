@@ -1,10 +1,16 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import "../styles/Person.css";
+import Page from "../layouts/Page";
+import { Link } from "react-router-dom";
+
 const Person = (props) => {
   const isLoaded = useSelector((state) => state.isLoaded);
   // console.log(props.user.picture.thumbnail);
 
+  const handleClick = (props) => {
+    console.log(props.user);
+  };
   return (
     <div className="box_person col-md-3">
       <div className="box_header_person">
@@ -25,7 +31,14 @@ const Person = (props) => {
         </ul>
       </div>
       <div className="box_footer_person">
-        <button className="btn btn-primary">Learn more</button>
+        <Link to={`/person/${props.user.login.username}`}>
+          <button
+            onClick={() => handleClick(props)}
+            className="btn btn-primary"
+          >
+            Learn more
+          </button>
+        </Link>
       </div>
     </div>
   );

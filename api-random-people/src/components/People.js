@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { addPerson } from "../actions/buttonAddPersonActions";
 import { generatePeople } from "../actions/personActions";
 import Person from "./Person.js";
-
+import { Link } from "react-router-dom";
 const People = () => {
   const dispatch = useDispatch();
   const store = useSelector((state) => state);
