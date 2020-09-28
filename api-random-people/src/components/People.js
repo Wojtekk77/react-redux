@@ -10,10 +10,7 @@ const People = () => {
   const store = useSelector((state) => state);
   // const [count, setCount] = useState(0);
   useEffect(() => {
-    fetch(
-      "https://cors-anywhere.herokuapp.com/" +
-        "https://randomuser.me/api/?results=5"
-    )
+    fetch("https://randomuser.me/api/?results=5")
       .then((res) => res.json())
       .then((res) => res.results)
       .then((person) => dispatch(generatePeople(person)));
