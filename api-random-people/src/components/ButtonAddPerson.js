@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addPerson } from "../actions/buttonAddPersonActions";
+import "../styles/Header.css";
 
 const ButtonAddPerson = () => {
   const dispatch = useDispatch();

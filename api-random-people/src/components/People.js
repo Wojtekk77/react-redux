@@ -23,8 +23,12 @@ const People = () => {
   });
   return (
     <div className="container">
-      <h1>People</h1>
-      <div className="row">{store.isLoaded ? people : <h2>Loading...</h2>}</div>
+      <div className="row justify-content-center">
+        <div className="col-12 text-center">
+          <h1>People</h1>
+        </div>
+        {store.isLoaded ? people : <h2>Loading...</h2>}
+      </div>
     </div>
   );
 };
