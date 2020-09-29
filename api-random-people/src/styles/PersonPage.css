@@ -1,0 +1,40 @@
+.box_person_page {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin: 5px;
+}
+
+.box_person_page:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.box_header_person_page {
+  text-align: center;
+  padding: 10px;
+}
+
+.box_header_person_page img {
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.box_header_person_page .name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.box_main_person_page {
+  border-top: 1px dotted black;
+  padding-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.box_main_person_page .email span {
+  font-weight: 700;
+}
+
+.box_footer_person_page {
+  text-align: center;
+  padding: 10px;
+}
