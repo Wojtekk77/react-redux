@@ -17,7 +17,7 @@ const PersonPage = ({ match }) => {
   const sp = singlePerson[0];
   return (
     <>
-      <div className="container">
+      <div className="container single_page_person">
         <div className="row justify-content-center">
           <div className="box_person_page col-md-3">
             <div className="box_header_person_page">

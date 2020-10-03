@@ -17,7 +17,11 @@ const ButtonAddPerson = () => {
       })
       .then((person) => dispatch(addPerson(person)));
   };
-  return <button onClick={handleAddPerson}>Add person</button>;
+  return (
+    <button className="btn btn-primary" onClick={handleAddPerson}>
+      Add person
+    </button>
+  );
 };
 
 export default ButtonAddPerson;

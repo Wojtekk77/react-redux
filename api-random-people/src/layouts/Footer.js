@@ -1,14 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import "../styles/Footer.css";
+
 export const Footer = () => (
-  <div className="container-fluid">
-    <div className="row footerWrapper bg-primary text-white">
-      <div className="col-md-4 text-center">footer1</div>
-      <div className="col-md-4 text-center">footer2</div>
-      <div className="col-md-4 text-center">footer3</div>
+  <footer className="fixed-bottom py-4 bg-dark text-white-50">
+    <div className="container text-center">
+      <small>Copyright &copy; Your Website</small>
     </div>
-  </div>
+  </footer>
 );
 
 const mapStateToProps = (state) => ({});

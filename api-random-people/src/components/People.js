@@ -22,10 +22,10 @@ const People = () => {
     return <Person key={user.email} user={user} />;
   });
   return (
-    <div className="container">
+    <div className="container people_box">
       <div className="row justify-content-center">
         <div className="col-md-12 text-center">
-          <h1>People</h1>
+          <h1 className="pt-5 pb-4">People</h1>
         </div>
         {store.isLoaded ? people : <h2>Loading...</h2>}
       </div>

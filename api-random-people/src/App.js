@@ -6,13 +6,13 @@ import Page from "./layouts/Page.js";
 import Footer from "./layouts/Footer";
 import Header from "./layouts/Header";
 import "./styles/Header.css";
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          hello world
+        <div className="app">
           <Header />
           {<Page />}
           <Footer />
