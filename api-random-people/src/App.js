@@ -3,6 +3,9 @@ import ButtonAddPerson from "./components/ButtonAddPerson.js";
 import People from "./components/People.js";
 import { BrowserRouter as Router } from "react-router-dom";
 import Page from "./layouts/Page.js";
+import Footer from "./layouts/Footer";
+import Header from "./layouts/Header";
+import "./styles/Header.css";
 
 class App extends Component {
   render() {
@@ -10,8 +13,9 @@ class App extends Component {
       <Router>
         <div className="App">
           hello world
-          <ButtonAddPerson />
+          <Header />
           {<Page />}
+          <Footer />
         </div>
       </Router>
     );
