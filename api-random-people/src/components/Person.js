@@ -1,16 +1,29 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import "../styles/Person.css";
 import Page from "../layouts/Page";
 import { Link } from "react-router-dom";
+import { deletePerson } from "../actions/personActions";
 
 const Person = (props) => {
-  const isLoaded = useSelector((state) => state.isLoaded);
+  const store  = useSelector((state) => state);
+  const isLoaded = store.isLoaded;
+  const dispatch = useDispatch();
+
   // console.log(props.user.picture.thumbnail);
 
   const handleClick = (props) => {
     console.log(props.user);
   };
+
+  const handleClickDelete = (props) => {
+    console.log(props.user)
+    console.log(store.users)
+    const users = store.users.filter((user)=>{
+      return (props.user != user)
+    }); 
+    dispatch(deletePerson(users))
+  }
   return (
     <div className="box_person col-md-3">
       <div className="box_header_person">
@@ -39,6 +52,12 @@ const Person = (props) => {
             Learn more
           </button>
         </Link>
+        <button
+            onClick={() => handleClickDelete(props)}
+            className="btn btn-warning"
+          >
+            Delete person
+        </button>
       </div>
     </div>
   );

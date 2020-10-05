@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { connect } from "react-redux";
 import { addPerson } from "../actions/buttonAddPersonActions";
-import { generatePeople } from "../actions/personActions";
+import { generatePeople, deletePerson } from "../actions/personActions";
 import Person from "./Person.js";
 import { Link } from "react-router-dom";
 const People = () => {

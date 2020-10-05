@@ -11,6 +11,9 @@ export const peopleReducer = (state = initialState, action) => {
     case "GENERATE_NEW_PEOPLE":
       console.log("generate new people");
       return { ...state, users: action.people, isLoaded: true };
+    case "DELETE_PERSON":
+      console.log("generate new people");
+      return { ...state, users: action.people};
     default:
       return state;
   }

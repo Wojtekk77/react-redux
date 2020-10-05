@@ -4,3 +4,10 @@ export const generatePeople = (people) => {
     people: people,
   };
 };
+
+export const deletePerson = (people) => {
+  return {
+    type: "DELETE_PERSON",
+    people: people,
+  };
+};
